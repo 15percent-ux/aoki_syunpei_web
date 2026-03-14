@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青木竣平 | ブランドプロデューサー</title>
+  <meta name="description" content="「こだわると稼げない」を覆す。元消防士のブランドプロデューサー・青木竣平が、あなたの事業の本質的な価値を世界に届けます。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & ROOT ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream:    #f7f4ee;
+      --cream-2:  #eeebe3;
+      --white:    #ffffff;
+      --ink:      #1c1a17;
+      --ink-mid:  #4a463f;
+      --ink-light:#8a857c;
+      --green:    #2c5545;
+      --green-mid:#3d7360;
+      --green-light: #e8f0ec;
+      --gold:     #a07830;
+      --border:   rgba(28,26,23,0.12);
+
+      --font-serif: 'Noto Serif JP', serif;
+      --font-sans:  'Noto Sans JP', sans-serif;
+      --font-latin: 'Cormorant Garamond', serif;
+
+      --max-w: 1160px;
+      --section-py: 100px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .label {
+      display: inline-block;
+      font-family: var(--font-latin);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .heading-xl {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+    }
+
+    .heading-lg {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+
+    .heading-md {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .body-text {
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      line-height: 2.2;
+      color: var(--ink-mid);
+    }
+
+    .rule {
+      width: 40px;
+      height: 2px;
+      background: var(--green);
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    /* ===== FADE IN ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      transition: background 0.4s, box-shadow 0.4s;
+    }
+
+    #header.scrolled {
+      background: rgba(247, 244, 238, 0.96);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-logo {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+    }
+
+    .site-logo span {
+      font-family: var(--font-latin);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--ink-light);
+      display: block;
+      margin-top: -2px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .nav-list a {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-mid);
+      transition: color 0.3s;
+    }
+
+    .nav-list a:hover { color: var(--green); }
+
+    .nav-cta {
+      background: var(--green) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.4rem !important;
+      font-size: 0.78rem !important;
+      transition: background 0.3s !important;
+    }
+
+    .nav-cta:hover { background: var(--green-mid) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--ink);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      top: 50%;
+      right: -2vw;
+      transform: translateY(-50%);
+      font-family: var(--font-latin);
+      font-size: clamp(6rem, 15vw, 16rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(28,26,23,0.04);
+      letter-spacing: -0.02em;
+      pointer-events: none;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-left {}
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-eyebrow-line {
+      width: 32px;
+      height: 1px;
+      background: var(--green);
+    }
+
+    .hero-eyebrow-text {
+      font-family: var(--font-latin);
+      font-size: 0.78rem;
+      letter-spacing: 0.3em;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title .accent {
+      color: var(--green);
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      line-height: 2.2;
+      color: var(--ink-mid);
+      margin-bottom: 3rem;
+      max-width: 420px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-fill {
+      background: var(--green);
+      color: var(--white);
+    }
+    .btn-fill:hover { background: var(--green-mid); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--cream-2);
+      overflow: hidden;
+    }
+
+    .hero-photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+    }
+
+    .hero-photo-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--ink-light);
+    }
+
+    .hero-photo-inner .photo-icon {
+      width: 48px;
+      height: 48px;
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-photo-inner p {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--ink-light);
+    }
+
+    .hero-photo-tag {
+      position: absolute;
+      bottom: -1rem;
+      left: -1rem;
+      background: var(--green);
+      color: var(--white);
+      padding: 1.2rem 1.5rem;
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 220px;
+    }
+
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-scroll-hint span {
+      font-family: var(--font-latin);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--ink-light);
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--green), transparent);
+      animation: scrollDown 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollDown {
+      0% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+      51% { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ===== DIVIDER ===== */
+    .wave-divider {
+      padding: 0 40px;
+    }
+    .wave-divider hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    /* ===== NUMBERS STRIP ===== */
+    #numbers {
+      background: var(--green);
+      padding: 5rem 40px;
+    }
+
+    .numbers-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      divide-x: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .number-item {
+      text-align: center;
+      padding: 2rem;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+    }
+
+    .number-item:last-child { border-right: none; }
+
+    .number-value {
+      font-family: var(--font-latin);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .number-value sup {
+      font-size: 0.4em;
+      vertical-align: super;
+    }
+
+    .number-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      opacity: 0.75;
+    }
+
+    .number-desc {
+      font-size: 0.75rem;
+      opacity: 0.55;
+      margin-top: 0.3rem;
+    }
+
+    /* ===== AWARD BANNER ===== */
+    #award {
+      background: var(--cream-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 40px;
+    }
+
+    .award-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .award-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .award-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .award-icon svg { width: 24px; height: 24px; }
+
+    .award-text {}
+    .award-text .award-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.05em;
+    }
+    .award-text .award-desc {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      letter-spacing: 0.08em;
+    }
+
+    .award-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--border);
+    }
+
+    /* ===== PROFILE ===== */
+    #profile {
+      padding: var(--section-py) 40px;
+      background: var(--cream);
+    }
+
+    .profile-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .profile-figure {
+      position: relative;
+    }
+
+    .profile-img-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--cream-2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .profile-img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+    }
+
+    .profile-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 2rem;
+    }
+
+    .profile-img-placeholder svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.25;
+    }
+
+    .profile-img-placeholder p {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      text-align: center;
+      letter-spacing: 0.08em;
+    }
+
+    .profile-name-card {
+      margin-top: 1.8rem;
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .profile-name-ja {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+    }
+
+    .profile-name-en {
+      font-family: var(--font-latin);
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: var(--ink-light);
+      margin-top: 0.2rem;
+    }
+
+    .profile-role {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .profile-text-area {
+      padding-top: 0.5rem;
+    }
+
+    .profile-bio {
+      font-size: 1rem;
+      line-height: 2.3;
+      color: var(--ink-mid);
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-bio strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .profile-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 2;
+      color: var(--ink);
+      font-weight: 500;
+      padding: 1.6rem 2rem;
+      border-left: 3px solid var(--green);
+      background: var(--white);
+      margin-bottom: 2.5rem;
+    }
+
+    .profile-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .profile-timeline-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-timeline-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .profile-timeline-year {
+      font-family: var(--font-latin);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      padding-top: 0.15rem;
+      font-weight: 500;
+    }
+
+    .profile-timeline-desc {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--ink-mid);
+    }
+
+    .profile-timeline-desc strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .profile-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .profile-img-frame {
+        aspect-ratio: 4/3;
+        max-width: 360px;
+      }
+    }
+
+    /* ===== NOTE FEED ===== */
+    #note-feed {
+      padding: 4rem 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .note-feed-header {
+      max-width: var(--max-w);
+      margin: 0 auto 2rem;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .note-feed-left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .note-feed-title {
+      font-family: var(--font-latin);
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+
+    .note-feed-link {
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .note-feed-link:hover {
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    .note-marquee {
+      overflow: hidden;
+      width: 100%;
+      cursor: grab;
+    }
+
+    .note-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      padding: 0.5rem 1.5rem;
+      animation: notemarquee 40s linear infinite;
+    }
+
+    .note-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes notemarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .note-card {
+      width: 260px;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background: var(--cream);
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .note-card:hover {
+      border-color: var(--green);
+      transform: translateY(-3px);
+    }
+
+    .note-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--cream-2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .note-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .note-card-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .note-card-img-placeholder svg {
+      width: 32px;
+      height: 32px;
+      opacity: 0.2;
+    }
+
+    .note-card-body {
+      padding: 1rem 1.2rem 1.2rem;
+    }
+
+    .note-card-title {
+      font-family: var(--font-serif);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--ink);
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+    }
+
+    .note-card-date {
+      font-size: 0.7rem;
+      color: var(--ink-light);
+      font-family: var(--font-latin);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== STORY ===== */
+    #story {
+      padding: var(--section-py) 40px;
+      background: var(--white);
+    }
+
+    .story-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-text {}
+
+    .story-figure {
+      position: relative;
+    }
+
+    .story-img-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--cream);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .story-img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+    }
+
+    .story-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 2rem;
+    }
+
+    .story-img-placeholder svg {
+      width: 40px;
+      height: 40px;
+      opacity: 0.3;
+    }
+
+    .story-img-placeholder p {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      text-align: center;
+      letter-spacing: 0.08em;
+    }
+
+    .story-caption {
+      position: absolute;
+      right: -2rem;
+      bottom: 2rem;
+      writing-mode: vertical-rl;
+      font-family: var(--font-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--ink-light);
+    }
+
+    .story-body p {
+      font-size: 0.97rem;
+      line-height: 2.3;
+      color: var(--ink-mid);
+      margin-bottom: 1.4rem;
+    }
+
+    .story-body strong { color: var(--ink); font-weight: 500; }
+
+    .story-blockquote {
+      margin: 2.5rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 3px solid var(--green);
+      background: var(--green-light);
+    }
+
+    .story-blockquote p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem !important;
+      font-weight: 500;
+      color: var(--green) !important;
+      line-height: 1.8 !important;
+      margin: 0 !important;
+    }
+
+    /* ===== CASE STUDY ===== */
+    #casestudy {
+      padding: var(--section-py) 40px;
+      background: var(--cream);
+    }
+
+    .casestudy-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .casestudy-header {
+      margin-bottom: 4rem;
+    }
+
+    .casestudy-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .casestudy-content {
+      padding: 4rem;
+    }
+
+    .farm-tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      font-family: var(--font-latin);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      padding: 0.3rem 0.8rem;
+      color: var(--ink-mid);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .casestudy-content h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+
+    .casestudy-content p {
+      font-size: 0.9rem;
+      line-height: 2.2;
+      color: var(--ink-mid);
+      margin-bottom: 1.2rem;
+    }
+
+    .casestudy-results {
+      background: var(--green);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .result-title {
+      font-family: var(--font-latin);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .result-items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .result-item {
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 2rem;
+    }
+
+    .result-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .result-num {
+      font-family: var(--font-latin);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .result-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.3rem;
+    }
+
+    .result-note {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.2rem;
+    }
+
+    /* ===== CREDIBILITY ===== */
+    #credibility {
+      padding: var(--section-py) 40px;
+      background: var(--white);
+    }
+
+    .credibility-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .credibility-text {}
+
+    .credibility-text p {
+      font-size: 0.95rem;
+      line-height: 2.3;
+      color: var(--ink-mid);
+      margin-bottom: 1.2rem;
+    }
+
+    .credibility-text strong { color: var(--ink); font-weight: 500; }
+
+    .credibility-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 3rem;
+    }
+
+    .credibility-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mentor-photo {
+      width: 72px;
+      height: 72px;
+      background: var(--cream-2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      color: var(--ink-light);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .mentor-info {}
+    .mentor-info .name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .mentor-info .role {
+      font-size: 0.75rem;
+      color: var(--green);
+      letter-spacing: 0.08em;
+    }
+
+    .credibility-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .credibility-fact {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    .credibility-fact::before {
+      content: '';
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+    }
+
+    /* ===== MISSION ===== */
+    #mission {
+      padding: var(--section-py) 40px;
+      background: var(--cream);
+    }
+
+    .mission-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .mission-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+    }
+
+    .mission-heading .cross {
+      text-decoration: line-through;
+      color: var(--ink-light);
+    }
+
+    .mission-heading .em {
+      color: var(--green);
+    }
+
+    .mission-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .mission-col p {
+      font-size: 0.95rem;
+      line-height: 2.3;
+      color: var(--ink-mid);
+      margin-bottom: 1.2rem;
+    }
+
+    /* ===== SERVICE ===== */
+    #service {
+      padding: var(--section-py) 40px;
+      background: var(--white);
+    }
+
+    .service-header {
+      max-width: var(--max-w);
+      margin: 0 auto 4rem;
+    }
+
+    .service-header .heading-lg {
+      max-width: 600px;
+    }
+
+    .service-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+      border: 1.5px solid var(--border);
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      transition: background 0.3s;
+    }
+
+    .service-card:hover {
+      background: var(--green-light);
+    }
+
+    .service-num {
+      font-family: var(--font-latin);
+      font-size: 3rem;
+      font-weight: 300;
+      color: rgba(28,26,23,0.1);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      line-height: 2;
+      color: var(--ink-mid);
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.3rem 0.8rem;
+      font-family: var(--font-latin);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--green);
+      border: 1px solid rgba(44,85,69,0.3);
+      text-transform: uppercase;
+    }
+
+    /* ===== FOR WHO ===== */
+    #forwho {
+      padding: var(--section-py) 40px;
+      background: var(--cream);
+    }
+
+    .forwho-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .forwho-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .forwho-list li {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    .forwho-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+    }
+
+    .forwho-message {
+      background: var(--green);
+      padding: 4rem;
+      color: var(--white);
+    }
+
+    .forwho-message p {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 2;
+      margin-bottom: 2.5rem;
+    }
+
+    .forwho-message .em {
+      color: rgba(255,255,255,0.6);
+      font-style: italic;
+    }
+
+    .forwho-message .strong {
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+
+    .forwho-sig {
+      font-family: var(--font-latin);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      opacity: 0.6;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1.5rem;
+    }
+
+    /* ===== SCHOOL ===== */
+    #school {
+      padding: var(--section-py) 40px;
+      background: var(--white);
+    }
+
+    .school-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .school-banner {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .school-content {
+      padding: 5rem 4rem;
+    }
+
+    .school-coming {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-family: var(--font-latin);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    .school-content h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+
+    .school-content p {
+      font-size: 0.9rem;
+      line-height: 2.2;
+      color: var(--ink-mid);
+      margin-bottom: 2rem;
+    }
+
+    .school-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .school-meta-row {
+      display: flex;
+      gap: 1.5rem;
+      align-items: baseline;
+      font-size: 0.85rem;
+    }
+
+    .school-meta-key {
+      font-family: var(--font-latin);
+      letter-spacing: 0.15em;
+      color: var(--green);
+      min-width: 80px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .school-meta-val { color: var(--ink-mid); }
+
+    .school-visual {
+      background: var(--green);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 3rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .school-visual-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .school-visual-sub {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      line-height: 2;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--green);
+      padding: 0.85rem 2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    .btn-white:hover { opacity: 0.85; }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      padding: var(--section-py) 40px;
+      background: var(--cream);
+    }
+
+    .contact-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-intro {
+      margin-bottom: 3.5rem;
+    }
+
+    .contact-note {
+      font-size: 0.9rem;
+      line-height: 2.2;
+      color: var(--ink-mid);
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-mid);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group label .req {
+      color: var(--green);
+      margin-left: 0.3rem;
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      color: var(--ink);
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      font-family: var(--font-sans);
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--green);
+    }
+
+    .form-input::placeholder { color: var(--ink-light); }
+
+    textarea.form-input {
+      height: 140px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      padding: 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: background 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .form-submit:hover { background: var(--green-mid); }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: var(--ink);
+      color: rgba(247,244,238,0.6);
+      padding: 4rem 40px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(247,244,238,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--cream);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .footer-brand .logo-sub {
+      font-family: var(--font-latin);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      line-height: 1.9;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-latin);
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer-col a {
+      font-size: 0.82rem;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover { color: var(--cream); }
+
+    .footer-bottom {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--cream);
+      z-index: 300;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--ink);
+      letter-spacing: 0.05em;
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--ink);
+      font-family: var(--font-sans);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      :root { --section-py: 70px; }
+
+      .container, .header-inner { padding: 0 24px; }
+
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-right { display: none; }
+      #hero { padding: 100px 24px 70px; }
+
+      .story-inner,
+      .mission-cols,
+      .forwho-inner,
+      .school-banner,
+      .school-inner,
+      .casestudy-card,
+      .credibility-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+      .casestudy-content, .casestudy-results { padding: 2.5rem; }
+      .award-divider { display: none; }
+
+      .service-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+      .numbers-grid { grid-template-columns: 1fr; }
+      .number-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+      .number-item:last-child { border-bottom: none; }
+
+      .nav-list { display: none; }
+      .hamburger { display: flex; }
+
+      #story, #service, #mission, #forwho, #school, #contact {
+        padding: var(--section-py) 24px;
+      }
+      #numbers { padding: 4rem 24px; }
+
+      .forwho-message { padding: 2.5rem; }
+      .school-content { padding: 3rem 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()">✕</button>
+    <a href="#profile" onclick="toggleMenu()">プロフィール</a>
+    <a href="#story" onclick="toggleMenu()">ストーリー</a>
+    <a href="#casestudy" onclick="toggleMenu()">実績</a>
+    <a href="#service" onclick="toggleMenu()">サービス</a>
+    <a href="#school" onclick="toggleMenu()">スクール</a>
+    <a href="#contact" onclick="toggleMenu()">お問い合わせ</a>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#hero" class="site-logo">
+        青木 竣平
+        <span>Brand Producer</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#story">ストーリー</a></li>
+          <li><a href="#casestudy">実績</a></li>
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#school">スクール</a></li>
+          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-text">Brand</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow reveal">
+          <div class="hero-eyebrow-line"></div>
+          <span class="hero-eyebrow-text">Brand Producer / Shumpei Aoki</span>
+        </div>
+        <h1 class="hero-title reveal reveal-d1">
+          こだわりを、<br />
+          <span class="accent">稼ぎに変える。</span>
+        </h1>
+        <p class="hero-subtitle reveal reveal-d2">
+          「こだわると稼げない」は、思い込みだ。<br />
+          あなたが届けたい本物の価値を、<br />
+          ブランドとして正しく世界に打ち出す。
+        </p>
+        <div class="hero-actions reveal reveal-d3">
+          <a href="#contact" class="btn btn-fill">無料相談を申し込む</a>
+          <a href="#story" class="btn btn-outline">青木の話を読む</a>
+        </div>
+      </div>
+      <div class="hero-right reveal reveal-d2">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-inner">
+            <div class="photo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+            </div>
+            <p>プロフィール写真</p>
+            <p style="font-size:0.7rem; opacity:0.6;">準備中</p>
+          </div>
+        </div>
+        <div class="hero-photo-tag">
+          命を救う仕事から、<br />夢を救う仕事へ。
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- AWARD BANNER -->
+  <div id="award">
+    <div class="award-inner">
+      <div class="award-badge reveal">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <div class="award-text">
+          <div class="award-name">JAPANESE DREAMS 2026　グランプリ受賞</div>
+          <div class="award-desc">ブドウ農家プロデュースの実績により受賞</div>
+        </div>
+      </div>
+      <div class="award-divider"></div>
+      <div class="award-badge reveal reveal-d1">
+        <div class="award-icon" style="background: var(--green);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div class="award-text">
+          <div class="award-name">川原卓巳 プロデュースの学校　修了</div>
+          <div class="award-desc">エミー賞受賞プロデューサーに師事・90名超の卒業生プログラム</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NUMBERS -->
+  <div id="numbers">
+    <div class="numbers-grid">
+      <div class="number-item reveal">
+        <div class="number-value">3<span style="font-size:0.5em; opacity:0.8;">倍</span></div>
+        <div class="number-label">売上アップ</div>
+        <div class="number-desc">EGAO FARM — 2年間で達成</div>
+      </div>
+      <div class="number-item reveal reveal-d1">
+        <div class="number-value">4<span style="font-size:0.5em; opacity:0.8;">倍</span></div>
+        <div class="number-label">利益アップ</div>
+        <div class="number-desc">EGAO FARM — 厚利少売を実現</div>
+      </div>
+      <div class="number-item reveal reveal-d2">
+        <div class="number-value">5<span style="font-size:0.5em; opacity:0.8;">倍</span></div>
+        <div class="number-label">単価アップ</div>
+        <div class="number-desc">価格競争からの完全脱却</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE FEED -->
+  <div id="note-feed">
+    <div class="note-feed-header">
+      <div class="note-feed-left">
+        <span class="note-feed-title">Note</span>
+      </div>
+      <a href="https://note.com/shumpei_aoki" target="_blank" rel="noopener" class="note-feed-link">
+        noteで読む →
+      </a>
+    </div>
+    <div class="note-marquee">
+      <div class="note-track" id="noteTrack">
+        <!-- JSで記事カードが挿入される -->
+      </div>
+    </div>
+  </div>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="profile-inner">
+      <div class="profile-figure reveal">
+        <div class="profile-img-frame">
+          <div class="profile-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="1">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            <p>プロフィール写真準備中</p>
+          </div>
+        </div>
+        <div class="profile-name-card">
+          <div class="profile-name-ja">青木 竣平</div>
+          <div class="profile-name-en">Shumpei Aoki</div>
+          <div class="profile-role">Brand Producer</div>
+        </div>
+      </div>
+      <div class="profile-text-area reveal reveal-d1">
+        <span class="label">Profile</span>
+        <h2 class="heading-lg">ヒーローを目指した<br />元消防士のプロデューサー</h2>
+        <div class="rule"></div>
+        <p class="profile-bio">
+          <strong>1998年、長野県生まれ。</strong>
+          5歳でヒーローに憧れ、その夢をまっすぐに追い続け、<strong>20歳で消防士に</strong>。
+          消防職員意見発表では<strong>県代表として出場し、関東大会へ</strong>。
+          長野県知事より<strong>表彰</strong>を受ける。
+          命の現場で学んだのは、
+        </p>
+        <blockquote class="profile-quote">
+          「当たり前の毎日は、奇跡の連続だ」
+        </blockquote>
+        <p class="profile-bio">
+          ご縁から地域農業と出会い、こだわり抜いているのに報われない現実に直面する。
+          「<strong>こだわると稼げない</strong>」を覆すため、プロデューサーの道へ。
+          ぶどう農家<strong>EGAO FARM</strong>とともに、世界一を目指す。
+        </p>
+        <div class="profile-timeline">
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">1998</div>
+            <div class="profile-timeline-desc">長野県生まれ。5歳でヒーローへの憧れを抱く</div>
+          </div>
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">2018</div>
+            <div class="profile-timeline-desc"><strong>消防士として採用</strong>。命の現場で救助活動に従事</div>
+          </div>
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">2020</div>
+            <div class="profile-timeline-desc">消防職員意見発表にて<strong>県代表出場・関東大会</strong>へ。<strong>長野県知事表彰</strong>を受賞</div>
+          </div>
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">2022</div>
+            <div class="profile-timeline-desc">地域農業と出会い、「こだわると稼げない」現実に直面。<strong>プロデューサーの道</strong>を志す</div>
+          </div>
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">2023</div>
+            <div class="profile-timeline-desc">エミー賞受賞プロデューサー・川原卓巳設立<strong>「プロデュースの学校」</strong>入学</div>
+          </div>
+          <div class="profile-timeline-item">
+            <div class="profile-timeline-year">Now</div>
+            <div class="profile-timeline-desc">ぶどう農家<strong>EGAO FARM</strong>をはじめ、食産業の本質的価値を世界へ届けるべく活動中</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="story-inner">
+      <div class="story-figure reveal">
+        <div class="story-img-frame">
+          <div class="story-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="1">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            <p>青木竣平</p>
+            <p style="font-size:0.7rem; margin-top:0.3rem; opacity:0.6;">プロフィール写真準備中</p>
+          </div>
+        </div>
+        <div class="story-caption">青木 竣平 / Brand Producer</div>
+      </div>
+      <div class="story-text reveal reveal-d1">
+        <span class="label">Story</span>
+        <h2 class="heading-lg">5歳でヒーローを<br />目指した少年の話</h2>
+        <div class="rule"></div>
+        <div class="story-body">
+          <p>
+            5歳の頃、青木竣平はヒーローに憧れた。
+            その夢をまっすぐ追い続け、<strong>20歳で消防士に採用</strong>。
+            現場で汗を流し、<strong>6,000人以上の救助活動</strong>に関わった。
+            その功績が認められ、<strong>長野県知事表彰</strong>を受賞する。
+          </p>
+          <blockquote class="story-blockquote">
+            <p>命の現場で学んだのは、<br />「本物の価値は、必ず誰かに届く」ということだった。</p>
+          </blockquote>
+          <p>
+            消防士として活動する一方で、農業や第一次産業の世界と深く関わるようになる。
+            そこで出会ったのは、<strong>圧倒的なこだわりを持ちながら、
+            正当な対価を得られずにいる生産者・事業者</strong>たちだった。
+          </p>
+          <p>
+            「こだわると稼げない」という言葉が、業界の常識のように語られていた。
+            しかし青木には、それが<strong>価値の届け方の問題</strong>だとわかった。
+            ブランドとして正しく発信すれば、こだわりはそのまま強みになる。
+          </p>
+          <p>
+            その確信を形にするため、<strong>エミー賞受賞プロデューサー・川原卓巳が設立した
+            「プロデュースの学校」</strong>に入学。本場のプロデュースメソッドを学ぶ。
+            その後、長野県のブドウ農家「EGAO FARM」のブランドプロデュースを手がけ、
+            <strong>2年間で売上3倍・利益4倍</strong>を実現。
+            その実績が認められ、<strong>JAPANESE DREAMS 2026 グランプリ</strong>を受賞した。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- CASE STUDY -->
+  <section id="casestudy">
+    <div class="casestudy-inner">
+      <div class="casestudy-header reveal">
+        <span class="label">Case Study</span>
+        <h2 class="heading-lg">プロデュース実績</h2>
+        <div class="rule"></div>
+        <p class="body-text" style="max-width: 600px;">
+          言葉だけでなく、数字で証明する。<br />
+          青木竣平が実際に関わった事例が、ここにある。
+        </p>
+      </div>
+      <div class="casestudy-card reveal reveal-d1">
+        <div class="casestudy-content">
+          <span class="farm-tag">EGAO FARM — Nagano</span>
+          <h3>長野県トップ賞の<br />ブドウ農家をプロデュース</h3>
+          <p>
+            長野県トップ賞に輝くほどの職人技とこだわりを持ちながらも、
+            <strong>後継者の学費すら払えない状況</strong>だった磯さんのブドウ農園。
+            「こだわりはある。でも、それが価格に反映されない」——
+            その典型的な課題を抱えていた。
+          </p>
+          <p>
+            青木竣平がブランドの核心を言語化し、
+            「誰に」「何を」「どう届けるか」を整理・再設計。
+            価格競争から脱却し、<strong>こだわりが価値として伝わる</strong>
+            ブランドストーリーを構築した。
+          </p>
+          <p>
+            広告費ゼロで熱狂的なファンが生まれ、
+            リピーターが口コミで顧客を広げる状態へ。
+            結果、<strong>わずか2年で売上3倍・利益4倍</strong>を達成した。
+          </p>
+          <div style="margin-top: 2rem;">
+            <span class="service-tag">Agriculture</span>
+            <span class="service-tag" style="margin-left: 0.5rem;">Brand Produce</span>
+          </div>
+        </div>
+        <div class="casestudy-results">
+          <div class="result-title">Results — 2 Years</div>
+          <div class="result-items">
+            <div class="result-item">
+              <div class="result-num">×3</div>
+              <div class="result-label">売上アップ</div>
+              <div class="result-note">2年間で達成</div>
+            </div>
+            <div class="result-item">
+              <div class="result-num">×4</div>
+              <div class="result-label">利益アップ</div>
+              <div class="result-note">厚利少売を実現</div>
+            </div>
+            <div class="result-item">
+              <div class="result-num">×5</div>
+              <div class="result-label">単価アップ</div>
+              <div class="result-note">価格競争から完全脱却</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- CREDIBILITY -->
+  <section id="credibility">
+    <div class="credibility-inner">
+      <div class="credibility-text reveal">
+        <span class="label">Background</span>
+        <h2 class="heading-lg">なぜ、青木竣平から<br />学ぶのか。</h2>
+        <div class="rule"></div>
+        <p>
+          プロデュースを「知っている人」は多い。
+          しかし、<strong>実際に数字を動かした人</strong>はほとんどいない。
+        </p>
+        <p>
+          青木竣平は、エミー賞受賞プロデューサー・川原卓巳が設立した
+          「プロデュースの学校」の修了生として、
+          本場のプロデュースメソッドを習得した。
+          そして現場でそれを実証した。
+        </p>
+        <p>
+          理論だけではなく、<strong>長野県の現場でゼロから実行し、
+          2年間で売上3倍・利益4倍という数字</strong>をつくった実績がある。
+          その経験を、あなたの事業に活かす。
+        </p>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="credibility-card">
+          <div class="credibility-card-top">
+            <div class="mentor-photo">写真<br />準備中</div>
+            <div class="mentor-info">
+              <div class="name">川原 卓巳</div>
+              <div class="role">プロデュースの学校 創設者 / エミー賞受賞</div>
+            </div>
+          </div>
+          <ul class="credibility-facts">
+            <li class="credibility-fact">近藤麻理恵（こんまり）を世界42カ国・1,500万部のベストセラーへプロデュース</li>
+            <li class="credibility-fact">Netflixプロデューサーとしてエミー賞受賞、世界190カ国で放映</li>
+            <li class="credibility-fact">「プロデュースの学校」を2023年創設、90名超の卒業生を輩出</li>
+            <li class="credibility-fact">青木竣平はその修了生として、日本食材特化クラスを開校</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <div class="mission-inner">
+      <span class="label reveal">Mission</span>
+      <h2 class="mission-heading reveal reveal-d1">
+        <span class="cross">「こだわると稼げない」</span><br />
+        という嘘を、<span class="em">覆す。</span>
+      </h2>
+      <div class="mission-cols">
+        <div class="reveal">
+          <p>
+            農業、漁業、林業、職人、地域産業——。
+            日本には「本物」が溢れている。
+            何十年もかけて磨いてきた技術、土地への深い愛着、
+            妥協しない素材へのこだわり。
+            それは紛れもなく、世界に誇れる価値だ。
+          </p>
+          <p>
+            それでも「価格を上げると売れない」「SNSは苦手で」
+            「ブランドなんて自分には関係ない」と、
+            本物の価値が正しく評価されない現実がある。
+          </p>
+        </div>
+        <div class="reveal reveal-d1">
+          <p>
+            問題は、価値の大きさではない。<strong style="color: var(--ink);">届け方だ。</strong>
+          </p>
+          <p>
+            青木竣平は、あなたの事業の核心にある「らしさ」を言語化し、
+            ビジョンとして打ち出し、ターゲットに届くブランドとして設計する。
+          </p>
+          <p>
+            こだわりを持つ人が、正当な対価を得て、
+            誇りを持って仕事を続けられる世界をつくるために。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service">
+    <div class="service-header reveal">
+      <span class="label">Service</span>
+      <h2 class="heading-lg">提供するサービス</h2>
+      <div class="rule"></div>
+      <p class="body-text" style="max-width: 600px;">
+        単なるSNS運用やロゴ作成ではない。
+        事業の本質を掘り起こし、市場に正しく届くための
+        戦略と表現を一貫して設計・実行する。
+      </p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <h3>ブランド戦略設計</h3>
+        <p>
+          あなたの事業の「なぜ」を言語化する。
+          競合との違い、届けたい相手、伝えるべきメッセージを整理し、
+          ブランドの骨格を構築する。
+        </p>
+        <span class="service-tag">Strategy</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-num">02</div>
+        <h3>ブランドプロデュース<br />（伴走型）</h3>
+        <p>
+          戦略設計から発信・運用まで、青木が伴走して実行する。
+          「何から始めればいいかわからない」状態から、
+          ブランドとして認知される状態まで、一緒に進む。
+        </p>
+        <span class="service-tag">Produce</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">03</div>
+        <h3>スポット相談<br />（単発セッション）</h3>
+        <p>
+          現状の課題を整理し、具体的なアクションプランを提示する。
+          「方向性だけ確認したい」「壁打ち相手が欲しい」という方に。
+        </p>
+        <span class="service-tag">Consulting</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"><hr /></div>
+
+  <!-- FOR WHO -->
+  <section id="forwho">
+    <div class="forwho-inner">
+      <div class="reveal">
+        <span class="label">For Who</span>
+        <h2 class="heading-lg">こんな方へ</h2>
+        <div class="rule"></div>
+        <ul class="forwho-list">
+          <li>農業・漁業・林業など第一次産業を営む方</li>
+          <li>こだわりはあるが、うまく発信できていない方</li>
+          <li>価格競争から抜け出し、ブランドとして認められたい方</li>
+          <li>地域の文化・産業を守り、次世代に継承したい方</li>
+          <li>自分の事業の「強み」が言語化できていない方</li>
+          <li>SNS・Webの発信を始めたいが、何からすればよいかわからない方</li>
+        </ul>
+      </div>
+      <div class="forwho-message reveal reveal-d1">
+        <p>
+          「自分たちの商品には自信がある。<br />
+          でも、それがうまく伝わらない。」<br /><br />
+          そう感じているなら、<br />
+          問題はあなたの価値ではない。<br /><br />
+          <span class="strong">届け方が、まだ最適化されていないだけだ。</span><br /><br />
+          その壁を一緒に越えるために、<br />
+          青木竣平はここにいる。
+        </p>
+        <div class="forwho-sig">— Shumpei Aoki / Brand Producer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOOL -->
+  <section id="school">
+    <div class="school-inner">
+      <div class="label reveal">School</div>
+      <h2 class="heading-lg reveal reveal-d1" style="margin-bottom: 3rem;">プロデュースの学校</h2>
+      <div class="school-banner reveal reveal-d2">
+        <div class="school-content">
+          <span class="school-coming">Coming Soon — 2026 Spring</span>
+          <h2>日本食材特化クラス<br />開校予定</h2>
+          <p>
+            日本の食材・食文化に携わる事業者が、
+            自らブランドを設計・発信できるようになるための実践スクール。
+            「学ぶ」だけでなく、「実際に動く」ためのプログラムを準備中。
+          </p>
+          <div class="school-meta">
+            <div class="school-meta-row">
+              <span class="school-meta-key">Opening</span>
+              <span class="school-meta-val">2026年春（予定）</span>
+            </div>
+            <div class="school-meta-row">
+              <span class="school-meta-key">Target</span>
+              <span class="school-meta-val">日本食材・食文化に関わる事業者</span>
+            </div>
+            <div class="school-meta-row">
+              <span class="school-meta-key">Format</span>
+              <span class="school-meta-val">詳細準備中</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-fill">開校情報を受け取る</a>
+        </div>
+        <div class="school-visual">
+          <div class="school-visual-title">
+            プロデュースの学校<br />
+            <span style="font-weight: 300; font-size: 0.8em; opacity: 0.8;">日本食材特化クラス</span>
+          </div>
+          <p class="school-visual-sub">
+            こだわりを持つ生産者が、<br />
+            自らの言葉でブランドを<br />
+            語れるようになる。<br /><br />
+            情報解禁をお待ちください。
+          </p>
+          <a href="#contact" class="btn btn-white">登録して待つ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-intro reveal">
+        <span class="label">Contact</span>
+        <h2 class="heading-lg">まず、話を聞かせてください。</h2>
+        <div class="rule"></div>
+        <p class="contact-note">
+          相談は無料です。「うちに合うかわからない」という段階でも構いません。<br />
+          あなたの事業のことを、聞かせてください。
+        </p>
+      </div>
+      <form class="reveal reveal-d1" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>お名前<span class="req">*</span></label>
+            <input type="text" name="name" class="form-input" placeholder="山田 太郎" required />
+          </div>
+          <div class="form-group">
+            <label>会社・屋号</label>
+            <input type="text" name="company" class="form-input" placeholder="○○農園" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>メールアドレス<span class="req">*</span></label>
+          <input type="email" name="email" class="form-input" placeholder="example@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>業種・事業内容</label>
+          <select name="industry" class="form-input">
+            <option value="">選択してください</option>
+            <option>農業</option>
+            <option>漁業</option>
+            <option>林業</option>
+            <option>食品加工・飲食</option>
+            <option>工芸・職人</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>ご相談内容<span class="req">*</span></label>
+          <textarea name="message" class="form-input" placeholder="事業の現状や、ご相談したいことを自由にお書きください。" required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">青木 竣平</span>
+        <span class="logo-sub">Brand Producer</span>
+        <p>
+          「こだわると稼げない」を覆す。<br />
+          第一次産業・地域事業者の<br />
+          ブランドプロデュースを手がける。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#story">ストーリー</a></li>
+          <li><a href="#casestudy">実績</a></li>
+          <li><a href="#service">サービス</a></li>
+          <li><a href="#school">スクール</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://note.com/shumpei_aoki" target="_blank" rel="noopener">note</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Shumpei Aoki. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // Note RSS feed marquee
+    (async function loadNoteArticles() {
+      const track = document.getElementById('noteTrack');
+      if (!track) return;
+
+      const RSS_URL = 'https://note.com/shumpei_aoki/rss';
+      const API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL) + '&count=10';
+
+      function formatDate(str) {
+        const d = new Date(str);
+        return d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0');
+      }
+
+      function getThumb(item) {
+        if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
+        if (item.enclosure && item.enclosure.link) return item.enclosure.link;
+        // descriptionのHTMLから<img>を抽出
+        const m = item.description && item.description.match(/<img[^>]+src=["']([^"']+)["']/i);
+        return m ? m[1] : null;
+      }
+
+      function buildCard(item) {
+        const card = document.createElement('a');
+        card.className = 'note-card';
+        card.href = item.link;
+        card.target = '_blank';
+        card.rel = 'noopener';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'note-card-img';
+        const thumb = getThumb(item);
+        if (thumb) {
+          const img = document.createElement('img');
+          img.src = thumb;
+          img.alt = item.title;
+          img.loading = 'lazy';
+          img.onerror = function() { this.parentElement.innerHTML = '<div class="note-card-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>'; };
+          imgDiv.appendChild(img);
+        } else {
+          imgDiv.innerHTML = '<div class="note-card-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>';
+        }
+
+        const body = document.createElement('div');
+        body.className = 'note-card-body';
+        body.innerHTML = '<div class="note-card-title">' + item.title + '</div>' +
+          '<div class="note-card-date">' + formatDate(item.pubDate) + '</div>';
+
+        card.appendChild(imgDiv);
+        card.appendChild(body);
+        return card;
+      }
+
+      try {
+        const res = await fetch(API);
+        const data = await res.json();
+        console.log('[note feed] status:', data.status, 'items:', data.items?.length, data.items?.[0]);
+        const items = (data.items || []).filter(i => i.title);
+
+        if (items.length === 0) return;
+
+        // カードを2セット追加（無限ループ用）
+        const fragment = document.createDocumentFragment();
+        [...items, ...items].forEach(item => fragment.appendChild(buildCard(item)));
+        track.appendChild(fragment);
+      } catch (e) {
+        // フェッチ失敗時はセクション非表示
+        const section = document.getElementById('note-feed');
+        if (section) section.style.display = 'none';
+      }
+    })();
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = '送信しました。ありがとうございます。';
+      btn.style.background = '#2c5545';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>
