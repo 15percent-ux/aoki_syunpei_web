@@ -927,6 +927,183 @@
       margin: 0 !important;
     }
 
+    /* ===== CHRONICLES ===== */
+    #chronicles {
+      background: var(--ink);
+      padding: var(--section-py) 0;
+      overflow: hidden;
+    }
+
+    .chronicles-header {
+      max-width: var(--max-w);
+      margin: 0 auto 5rem;
+      padding: 0 40px;
+      text-align: center;
+    }
+
+    .chronicles-header .label { color: rgba(255,255,255,0.4); }
+    .chronicles-header h2 { color: var(--white); }
+    .chronicles-header .rule { background: rgba(255,255,255,0.12); max-width: 60px; }
+
+    .chronicles-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.9;
+      margin-top: 1.2rem;
+    }
+
+    .chronicles-timeline {
+      position: relative;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .chronicles-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255,255,255,0.08);
+      transform: translateX(-50%);
+    }
+
+    .chronicles-item {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: start;
+      margin-bottom: 6rem;
+    }
+
+    .chronicles-item:last-child { margin-bottom: 0; }
+
+    /* Odd: card left, photo right */
+    .chronicles-item:nth-child(odd) .chronicles-card {
+      grid-column: 1; grid-row: 1;
+      padding-right: 3rem;
+      text-align: right;
+    }
+    .chronicles-item:nth-child(odd) .chronicles-node {
+      grid-column: 2; grid-row: 1;
+    }
+    .chronicles-item:nth-child(odd) .chronicles-photo {
+      grid-column: 3; grid-row: 1;
+      padding-left: 3rem;
+    }
+
+    /* Even: photo left, card right */
+    .chronicles-item:nth-child(even) .chronicles-photo {
+      grid-column: 1; grid-row: 1;
+      padding-right: 3rem;
+    }
+    .chronicles-item:nth-child(even) .chronicles-node {
+      grid-column: 2; grid-row: 1;
+    }
+    .chronicles-item:nth-child(even) .chronicles-card {
+      grid-column: 3; grid-row: 1;
+      padding-left: 3rem;
+      text-align: left;
+    }
+
+    .chronicles-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1.6rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chronicles-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(160,120,48,0.2);
+    }
+
+    .chronicles-year {
+      font-family: var(--font-latin);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.2);
+      margin-top: 0.8rem;
+      white-space: nowrap;
+      writing-mode: vertical-rl;
+    }
+
+    .chronicles-badge {
+      display: inline-block;
+      border: 1px solid rgba(160,120,48,0.5);
+      color: var(--gold);
+      font-family: var(--font-latin);
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      padding: 0.2rem 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .chronicles-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 1.8vw, 1.35rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .chronicles-desc {
+      font-size: 0.84rem;
+      line-height: 2.1;
+      color: rgba(255,255,255,0.48);
+    }
+
+    .chronicles-desc strong {
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    .chronicles-photo-frame {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chronicles-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .chronicles-photo-frame .photo-placeholder-icon {
+      opacity: 0.12;
+    }
+
+    .chronicles-photo-frame .photo-placeholder-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .chronicles-photo-frame .photo-placeholder-label {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.12em;
+    }
+
     /* ===== CASE STUDY ===== */
     #casestudy {
       padding: var(--section-py) 40px;
@@ -1934,6 +2111,205 @@
   </section>
 
   <div class="wave-divider"><hr /></div>
+
+  <!-- CHRONICLES -->
+  <section id="chronicles">
+    <div class="chronicles-header reveal">
+      <span class="label">Chronicles</span>
+      <h2 class="heading-lg">挑戦の軌跡</h2>
+      <div class="rule"></div>
+      <p class="chronicles-sub">2024年から現在まで。<br />決断と覚悟が重なり、プロデューサーとしての青木竣平が生まれた。</p>
+    </div>
+
+    <div class="chronicles-timeline">
+
+      <!-- 01: Forbes Japan 最優秀賞 -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Award</span>
+          <h3 class="chronicles-title">「才能がある」——<br />Forbes Japan会場で最優秀賞</h3>
+          <p class="chronicles-desc">
+            プレゼン経験ゼロ、資料作成経験もゼロから挑んだ<strong>local startup school</strong>最終審査。
+            Forbes Japan会場で、ポーラ社長・Forbes編集長ら豪華審査員の前でプレゼンし<strong>最優秀賞</strong>を受賞。
+            「Forbesのrising starを目指そう」——その言葉が、次の扉を開いた。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2024.08</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="01">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — Forbes Japan会場</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02: 消防士卒業 -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Decision</span>
+          <h3 class="chronicles-title">消防士、卒業——<br />枠のない世界へ</h3>
+          <p class="chronicles-desc">
+            5歳から憧れ続け、20歳で叶えた夢。6年間・<strong>約5,000件の救急出動</strong>。
+            多くの命の瞬間を目の当たりにするうちに、確信が生まれた。
+            「人の人生を救える職業は、消防士だけじゃない。」
+            <strong>2025年3月、退職。</strong>プロデューサーへの道を選んだ。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2025.04</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="02">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — 消防士卒業</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03: 松本大学 講義 -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Lecture</span>
+          <h3 class="chronicles-title">スタンドからフィールドへ——<br />松本大学100名に講義</h3>
+          <p class="chronicles-desc">
+            松本大学総合経営学科1年生<strong>100名超</strong>の前で90分の特別講義。
+            テーマは「一歩踏み出す勇気」。
+            「一度きりの人生、遠慮せずに生ききってほしい」——
+            講義後、学生たちが駆け寄り写真を求めた。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2025.06</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="03">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — 松本大学講義</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04: ICC 2部門2位 -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Award</span>
+          <h3 class="chronicles-title">日本最大級の食のアワードで<br />2部門2位</h3>
+          <p class="chronicles-desc">
+            <strong>ICCサミット フードアンドドリンクアワード</strong>に全国18社が集結。
+            加工なし、味付けなし、素材そのもののぶどう一粒で勝負。
+            <strong>美味しさ部門・アルチザン（職人技）部門でそれぞれ2位</strong>を獲得。
+            「石橋さんのぶどうの価値が認められた瞬間、涙が止まりませんでした。」
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2025.09</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="04">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — ICCサミット</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05: ふるさと納税危機 -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Crisis</span>
+          <h3 class="chronicles-title">350房のキャンセル——<br />無力を知った日</h3>
+          <p class="chronicles-desc">
+            ふるさと納税の産地偽造問題に端を発した連帯責任。
+            出荷間近のぶどう<strong>350房が全てキャンセル</strong>に。
+            大きな力の前に無力を痛感しながら、
+            それでも指を咥えていることはしなかった。
+            SNSで支援を呼びかけ、ファンとともに危機を乗り越えた。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2025.09</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="05">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — EGAO FARM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06: Japanese Dreams グランプリ -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">Grand Prix</span>
+          <h3 class="chronicles-title">Japanese Dreams 2026<br />グランプリ受賞</h3>
+          <p class="chronicles-desc">
+            応募者約100名から選ばれた<strong>5名のファイナリスト</strong>。
+            ベストセラー作家・本田健、吉田潤喜（ヨシダソース）、
+            川原卓巳ら世界的審査員の前でプレゼンし、<strong>グランプリを獲得</strong>。
+            賞金は、EGAO FARMのみんなと大切な人々へ。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2026.01</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="06">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — Japanese Dreams</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07: プロデュースの学校 新クラス -->
+      <div class="chronicles-item reveal">
+        <div class="chronicles-card">
+          <span class="chronicles-badge">New Chapter</span>
+          <h3 class="chronicles-title">川原卓巳と共に——<br />日本食材特化クラスを立ち上げ</h3>
+          <p class="chronicles-desc">
+            恩師・<strong>世界的プロデューサー川原卓巳</strong>とともに
+            「プロデュースの学校 日本食材特化クラス」を創設。
+            「稼げて、継いでいける食産業の未来をつくりたい。」
+            一次・二次産業の生産者に<strong>プロデュースという武器</strong>を届ける、
+            新たな使命が始まった。
+          </p>
+        </div>
+        <div class="chronicles-node">
+          <div class="chronicles-dot"></div>
+          <div class="chronicles-year">2026.01</div>
+        </div>
+        <div class="chronicles-photo">
+          <div class="chronicles-photo-frame" data-event="07">
+            <div class="photo-placeholder-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <span class="photo-placeholder-label">Photo — プロデュースの学校</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="wave-divider" style="background: var(--ink);"><hr style="border-color: rgba(255,255,255,0.08);"/></div>
 
   <!-- CASE STUDY -->
   <section id="casestudy">
