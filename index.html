@@ -846,6 +846,164 @@
       letter-spacing: 0.08em;
     }
 
+    /* ===== PHILOSOPHY ===== */
+    #philosophy {
+      background: var(--ink);
+      padding: var(--section-py) 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #philosophy::before {
+      content: 'Mission';
+      position: absolute;
+      top: -0.1em;
+      left: -0.05em;
+      font-family: var(--font-latin);
+      font-size: clamp(8rem, 18vw, 18rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.02);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: -0.03em;
+    }
+
+    .philosophy-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .philosophy-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .philosophy-header .label { color: rgba(255,255,255,0.4); }
+    .philosophy-header h2 { color: var(--white); }
+    .philosophy-header .rule { background: rgba(201,164,106,0.3); max-width: 60px; }
+
+    .philosophy-manifesto {
+      text-align: center;
+      margin-bottom: 5rem;
+      padding: 0 10%;
+    }
+
+    .philosophy-manifesto-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.9;
+      letter-spacing: 0.05em;
+    }
+
+    .philosophy-manifesto-text em {
+      font-style: normal;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .philosophy-divider {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      margin: 3rem auto;
+    }
+
+    .philosophy-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .philosophy-body-col p {
+      font-size: 0.9rem;
+      line-height: 2.4;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .philosophy-body-col p strong {
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .philosophy-commitments {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .philosophy-commitments-label {
+      font-family: var(--font-latin);
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .philosophy-commitments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .philosophy-commitment-item {
+      padding: 2.5rem 3rem;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+    }
+
+    .philosophy-commitment-item:last-child { border-right: none; }
+
+    .philosophy-commitment-num {
+      font-family: var(--font-latin);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .philosophy-commitment-text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    .philosophy-vision {
+      text-align: center;
+      padding: 4rem 0 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .philosophy-vision-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3.5vw, 3rem);
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+    }
+
+    .philosophy-vision-text span {
+      color: var(--gold);
+    }
+
+    .philosophy-vision-sub {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.1em;
+    }
+
     /* ===== STORY ===== */
     #story {
       padding: var(--section-py) 40px;
@@ -2072,7 +2230,86 @@
     </div>
   </section>
 
-  <div class="wave-divider"><hr /></div>
+  <div class="wave-divider" style="background: var(--ink);"><hr style="border-color: rgba(255,255,255,0.06);"/></div>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="philosophy-inner">
+
+      <div class="philosophy-header reveal">
+        <span class="label">Philosophy</span>
+        <h2 class="heading-lg">使命と理念</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="philosophy-manifesto reveal">
+        <p class="philosophy-manifesto-text">
+          「<em>良いものを作るだけじゃ売れない</em>」を、<br />覆したい。
+        </p>
+        <div class="philosophy-divider"></div>
+        <p class="philosophy-manifesto-text" style="font-size: clamp(1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.6);">
+          こだわる事と儲ける事——<br />これを<em>イコール</em>にすることが、僕の使命だ。
+        </p>
+      </div>
+
+      <div class="philosophy-body reveal">
+        <div class="philosophy-body-col">
+          <p>
+            僕にとって<strong>生産者の皆さんは日本の誇り</strong>であり、
+            日本という国の価値を支えている方々だと感じています。
+            こだわりを利益に変えることが僕の役目であり使命です。
+          </p>
+          <p>
+            生産者の方々は<strong>命を使って価値あるものを生み出しています</strong>。
+            効率を引き換えにして品質を高め、利益を引き換えに唯一無二を生み出す——
+            僕はそれを「こだわる」ことだと定義しています。
+          </p>
+        </div>
+        <div class="philosophy-body-col">
+          <p>
+            非効率で薄利でも最上を目指す人たちは<strong>日本の財産</strong>です。
+            後世に残し、世界に届けるべき価値を秘めています。
+            よりよいものを生み出すには利益が必要で、
+            その両方を僕は解決してきました。
+          </p>
+          <p>
+            <strong>あるべき場所になかっただけ</strong>なんです。
+            認められる場所に変えただけで利益が増え、ファンも応援者も増えた——
+            そのリアルを側でずっと見てきました。
+            実践から生まれた法則と手法で利益を増やしていく、これが僕の使命です。
+          </p>
+        </div>
+      </div>
+
+      <div class="philosophy-commitments reveal">
+        <div class="philosophy-commitments-label">Commitment</div>
+        <div class="philosophy-commitments-grid">
+          <div class="philosophy-commitment-item">
+            <div class="philosophy-commitment-num">01</div>
+            <div class="philosophy-commitment-text">やらない自分が<br />気持ち悪い</div>
+          </div>
+          <div class="philosophy-commitment-item">
+            <div class="philosophy-commitment-num">02</div>
+            <div class="philosophy-commitment-text">効率を考えたら<br />やらない</div>
+          </div>
+          <div class="philosophy-commitment-item">
+            <div class="philosophy-commitment-num">03</div>
+            <div class="philosophy-commitment-text">ここだけは<br />譲れない</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="philosophy-vision reveal">
+        <p class="philosophy-vision-text">
+          日本の<span>コトモノ</span>を、<br />再定義したい。
+        </p>
+        <p class="philosophy-vision-sub">Redefine the Value of Japan</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="wave-divider" style="background: var(--ink);"><hr style="border-color: rgba(255,255,255,0.06);"/></div>
 
   <!-- STORY -->
   <section id="story">
