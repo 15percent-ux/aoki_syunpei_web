@@ -17,17 +17,16 @@
     }
 
     :root {
-      --cream:    #f7f4ee;
-      --cream-2:  #eeebe3;
+      --cream:    #f5f3ef;
+      --cream-2:  #ece8df;
       --white:    #ffffff;
-      --ink:      #1c1a17;
-      --ink-mid:  #4a463f;
-      --ink-light:#8a857c;
-      --green:    #2c5545;
-      --green-mid:#3d7360;
-      --green-light: #e8f0ec;
-      --gold:     #a07830;
-      --border:   rgba(28,26,23,0.12);
+      --ink:      #0d0b09;
+      --ink-mid:  #3d3a35;
+      --ink-light:#7a756c;
+      --gold:     #c9a84c;
+      --gold-mid: #b8963e;
+      --gold-light: #f2ece0;
+      --border:   rgba(13,11,9,0.1);
 
       --font-serif: 'Noto Serif JP', serif;
       --font-sans:  'Noto Sans JP', sans-serif;
@@ -64,7 +63,7 @@
       font-family: var(--font-latin);
       font-size: 0.75rem;
       letter-spacing: 0.3em;
-      color: var(--green);
+      color: var(--gold);
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
@@ -101,7 +100,7 @@
     .rule {
       width: 40px;
       height: 2px;
-      background: var(--green);
+      background: var(--gold);
       margin: 1.5rem 0 2.5rem;
     }
 
@@ -126,10 +125,16 @@
     }
 
     #header.scrolled {
-      background: rgba(247, 244, 238, 0.96);
+      background: rgba(13, 11, 9, 0.97);
       backdrop-filter: blur(8px);
-      box-shadow: 0 1px 0 var(--border);
+      box-shadow: 0 1px 0 rgba(201,168,76,0.15);
     }
+
+    #header.scrolled .site-logo { color: var(--white); }
+    #header.scrolled .site-logo span { color: rgba(255,255,255,0.45); }
+    #header.scrolled .nav-list a { color: rgba(255,255,255,0.65); }
+    #header.scrolled .nav-list a:hover { color: var(--gold); }
+    #header.scrolled .hamburger span { background: var(--white); }
 
     .header-inner {
       max-width: var(--max-w);
@@ -172,17 +177,17 @@
       transition: color 0.3s;
     }
 
-    .nav-list a:hover { color: var(--green); }
+    .nav-list a:hover { color: var(--gold); }
 
     .nav-cta {
-      background: var(--green) !important;
+      background: var(--gold) !important;
       color: var(--white) !important;
       padding: 0.55rem 1.4rem !important;
       font-size: 0.78rem !important;
       transition: background 0.3s !important;
     }
 
-    .nav-cta:hover { background: var(--green-mid) !important; }
+    .nav-cta:hover { background: var(--gold-mid) !important; }
 
     .hamburger {
       display: none;
@@ -210,7 +215,14 @@
       padding: 120px 40px 80px;
       position: relative;
       overflow: hidden;
+      background: var(--ink);
     }
+
+    #hero .hero-title,
+    #hero .hero-desc,
+    #hero .hero-meta-item { color: rgba(255,255,255,0.85); }
+    #hero .hero-desc { color: rgba(255,255,255,0.55); }
+    #hero .hero-meta-label { color: rgba(255,255,255,0.35); }
 
     .hero-bg-text {
       position: absolute;
@@ -221,7 +233,7 @@
       font-size: clamp(6rem, 15vw, 16rem);
       font-weight: 300;
       font-style: italic;
-      color: rgba(28,26,23,0.04);
+      color: rgba(255,255,255,0.025);
       letter-spacing: -0.02em;
       pointer-events: none;
       white-space: nowrap;
@@ -250,14 +262,14 @@
     .hero-eyebrow-line {
       width: 32px;
       height: 1px;
-      background: var(--green);
+      background: var(--gold);
     }
 
     .hero-eyebrow-text {
       font-family: var(--font-latin);
       font-size: 0.78rem;
       letter-spacing: 0.3em;
-      color: var(--green);
+      color: var(--gold);
       text-transform: uppercase;
     }
 
@@ -271,7 +283,7 @@
     }
 
     .hero-title .accent {
-      color: var(--green);
+      color: var(--gold);
       display: block;
     }
 
@@ -302,10 +314,10 @@
     }
 
     .btn-fill {
-      background: var(--green);
+      background: var(--gold);
       color: var(--white);
     }
-    .btn-fill:hover { background: var(--green-mid); }
+    .btn-fill:hover { background: var(--gold-mid); }
 
     .btn-outline {
       background: transparent;
@@ -313,8 +325,8 @@
       border: 1.5px solid var(--border);
     }
     .btn-outline:hover {
-      border-color: var(--green);
-      color: var(--green);
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
     .hero-right {
@@ -325,7 +337,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 4/5;
-      background: var(--cream-2);
+      background: rgba(255,255,255,0.04);
       overflow: hidden;
     }
 
@@ -333,7 +345,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(201,168,76,0.25);
     }
 
     .hero-photo-inner {
@@ -344,13 +356,13 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      color: var(--ink-light);
+      color: rgba(255,255,255,0.3);
     }
 
     .hero-photo-inner .photo-icon {
       width: 48px;
       height: 48px;
-      border: 1.5px solid var(--border);
+      border: 1.5px solid rgba(201,168,76,0.3);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -361,14 +373,14 @@
     .hero-photo-inner p {
       font-size: 0.78rem;
       letter-spacing: 0.1em;
-      color: var(--ink-light);
+      color: rgba(255,255,255,0.25);
     }
 
     .hero-photo-tag {
       position: absolute;
       bottom: -1rem;
       left: -1rem;
-      background: var(--green);
+      background: var(--gold);
       color: var(--white);
       padding: 1.2rem 1.5rem;
       font-family: var(--font-serif);
@@ -392,14 +404,14 @@
       font-family: var(--font-latin);
       font-size: 0.7rem;
       letter-spacing: 0.3em;
-      color: var(--ink-light);
+      color: rgba(255,255,255,0.3);
       text-transform: uppercase;
     }
 
     .scroll-line {
       width: 1px;
       height: 50px;
-      background: linear-gradient(to bottom, var(--green), transparent);
+      background: linear-gradient(to bottom, var(--gold), transparent);
       animation: scrollDown 2s ease-in-out infinite;
     }
 
@@ -423,8 +435,10 @@
 
     /* ===== NUMBERS STRIP ===== */
     #numbers {
-      background: var(--green);
+      background: var(--ink);
       padding: 5rem 40px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
     }
 
     .numbers-grid {
@@ -451,6 +465,7 @@
       line-height: 1;
       margin-bottom: 0.4rem;
       letter-spacing: -0.02em;
+      color: var(--gold);
     }
 
     .number-value sup {
@@ -611,7 +626,7 @@
     .profile-role {
       margin-top: 0.8rem;
       font-size: 0.8rem;
-      color: var(--green);
+      color: var(--gold);
       letter-spacing: 0.1em;
       padding-top: 0.8rem;
       border-top: 1px solid var(--border);
@@ -640,7 +655,7 @@
       color: var(--ink);
       font-weight: 500;
       padding: 1.6rem 2rem;
-      border-left: 3px solid var(--green);
+      border-left: 3px solid var(--gold);
       background: var(--white);
       margin-bottom: 2.5rem;
     }
@@ -667,7 +682,7 @@
       font-family: var(--font-latin);
       font-size: 0.82rem;
       letter-spacing: 0.1em;
-      color: var(--green);
+      color: var(--gold);
       padding-top: 0.15rem;
       font-weight: 500;
     }
@@ -722,7 +737,7 @@
       font-family: var(--font-latin);
       font-size: 0.75rem;
       letter-spacing: 0.3em;
-      color: var(--green);
+      color: var(--gold);
       text-transform: uppercase;
     }
 
@@ -735,8 +750,8 @@
     }
 
     .note-feed-link:hover {
-      color: var(--green);
-      border-color: var(--green);
+      color: var(--gold);
+      border-color: var(--gold);
     }
 
     .note-marquee {
@@ -773,7 +788,7 @@
     }
 
     .note-card:hover {
-      border-color: var(--green);
+      border-color: var(--gold);
       transform: translateY(-3px);
     }
 
@@ -914,15 +929,15 @@
     .story-blockquote {
       margin: 2.5rem 0;
       padding: 1.5rem 2rem;
-      border-left: 3px solid var(--green);
-      background: var(--green-light);
+      border-left: 3px solid var(--gold);
+      background: var(--gold-light);
     }
 
     .story-blockquote p {
       font-family: var(--font-serif);
       font-size: 1.1rem !important;
       font-weight: 500;
-      color: var(--green) !important;
+      color: var(--gold) !important;
       line-height: 1.8 !important;
       margin: 0 !important;
     }
@@ -1159,7 +1174,7 @@
     }
 
     .casestudy-results {
-      background: #5a1e35;
+      background: var(--ink);
       padding: 4rem;
       display: flex;
       flex-direction: column;
@@ -1278,7 +1293,7 @@
     }
     .mentor-info .role {
       font-size: 0.75rem;
-      color: var(--green);
+      color: var(--gold);
       letter-spacing: 0.08em;
     }
 
@@ -1302,7 +1317,7 @@
       flex-shrink: 0;
       width: 5px;
       height: 5px;
-      background: var(--green);
+      background: var(--gold);
       border-radius: 50%;
       margin-top: 0.55rem;
     }
@@ -1332,7 +1347,7 @@
     }
 
     .mission-heading .em {
-      color: var(--green);
+      color: var(--gold);
     }
 
     .mission-cols {
@@ -1380,7 +1395,7 @@
     }
 
     .service-card:hover {
-      background: var(--green-light);
+      background: var(--gold-light);
     }
 
     .service-num {
@@ -1413,7 +1428,7 @@
       font-family: var(--font-latin);
       font-size: 0.7rem;
       letter-spacing: 0.2em;
-      color: var(--green);
+      color: var(--gold);
       border: 1px solid rgba(44,85,69,0.3);
       text-transform: uppercase;
     }
@@ -1453,13 +1468,13 @@
       flex-shrink: 0;
       width: 5px;
       height: 5px;
-      background: var(--green);
+      background: var(--gold);
       border-radius: 50%;
       margin-top: 0.55rem;
     }
 
     .forwho-message {
-      background: var(--green);
+      background: var(--gold);
       padding: 4rem;
       color: var(--white);
     }
@@ -1515,7 +1530,7 @@
 
     .school-coming {
       display: inline-block;
-      background: var(--green);
+      background: var(--gold);
       color: var(--white);
       font-family: var(--font-latin);
       font-size: 0.7rem;
@@ -1557,7 +1572,7 @@
     .school-meta-key {
       font-family: var(--font-latin);
       letter-spacing: 0.15em;
-      color: var(--green);
+      color: var(--gold);
       min-width: 80px;
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -1566,7 +1581,7 @@
     .school-meta-val { color: var(--ink-mid); }
 
     .school-visual {
-      background: var(--green);
+      background: var(--gold);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1593,7 +1608,7 @@
 
     .btn-white {
       background: var(--white);
-      color: var(--green);
+      color: var(--gold);
       padding: 0.85rem 2rem;
       font-size: 0.82rem;
       letter-spacing: 0.12em;
@@ -1638,7 +1653,7 @@
     }
 
     .form-group label .req {
-      color: var(--green);
+      color: var(--gold);
       margin-left: 0.3rem;
     }
 
@@ -1657,7 +1672,7 @@
 
     .form-input:focus {
       outline: none;
-      border-color: var(--green);
+      border-color: var(--gold);
     }
 
     .form-input::placeholder { color: var(--ink-light); }
@@ -1675,7 +1690,7 @@
 
     .form-submit {
       width: 100%;
-      background: var(--green);
+      background: var(--gold);
       color: var(--white);
       border: none;
       padding: 1.1rem;
@@ -1688,7 +1703,7 @@
       margin-top: 0.5rem;
     }
 
-    .form-submit:hover { background: var(--green-mid); }
+    .form-submit:hover { background: var(--gold-mid); }
 
     /* ===== FOOTER ===== */
     #footer {
@@ -1936,7 +1951,7 @@
       </div>
       <div class="award-divider"></div>
       <div class="award-badge reveal reveal-d1">
-        <div class="award-icon" style="background: var(--green);">
+        <div class="award-icon" style="background: var(--gold);">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
             <polyline points="22 4 12 14.01 9 11.01"/>
